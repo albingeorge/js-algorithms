@@ -1,17 +1,16 @@
-var program = require('commander');
+var program = require('commander'),
+    algo_import = require("./lib/import.js");
 
 program
-  .version('0.0.1')
-  .option('-a, --algorithm <blah>', 'Relative path to algorithm')
-  .option('-i, --input-file <blah>', 'Relative path to input file');
+    .version('0.0.1')
+    .option('-a, --algorithm <algorithm-name>', 'Relative path to algorithm');
+
 program.parse(process.argv);
 
-console.log(program.inputFile);
 
-if(typeof(program.algorithm == "undefined")) {
+if(typeof(program.algorithm) == "undefined") {
     console.log("Algorithm file required.");
     console.log("Try --help");
 } else {
-    var algo = require(program.algorithm);
-    algo(program.inputFile);
+    var algorithm = algo_import(program.algorithm);
 }
