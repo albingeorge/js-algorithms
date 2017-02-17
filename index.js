@@ -12,5 +12,5 @@ if(typeof(program.algorithm) == "undefined") {
     console.log("Algorithm file required.");
     console.log("Try --help");
 } else {
-    var algorithm = algo_import(program.algorithm);
+    algo_import(program.algorithm).call();
 }
