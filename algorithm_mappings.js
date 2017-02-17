@@ -1,6 +1,6 @@
 module.exports = {
     "insertion-sort": {
         "type": "sort",
-        "file_name": "insertion.js"
+        "file_name": "insertion"
     }
 }
