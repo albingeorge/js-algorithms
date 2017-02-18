@@ -11,10 +11,7 @@ module.exports = function() {
     for(let i=1; i<input.length; i++) {
         for(let j=i - 1; j>=0; j--) {
             if(input[j + 1] < input[j]) {
-                print_input();
-                let temp = input[j + 1];
-                input[j + 1] = input[j];
-                input[j] = temp;
+                [input[j], input[j + 1]] = [input[j + 1], input[j]];
             } else {
                 break;
             }
