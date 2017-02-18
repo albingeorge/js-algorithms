@@ -1,3 +1,5 @@
+// Complexity: O(n^2)
+
 module.exports = function() {
 
     var input = [3, 6, 1, 7, 2, 3, 9, 8];
