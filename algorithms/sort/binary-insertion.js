@@ -1,8 +1,8 @@
 // Complexity: O(n * lg(n))
 
-// Somewhat the same as insertion sort, but instead of pairwise swap,
-// it finds where to insert the current element and inserts it there
-// by shifting all the elements to the right of that position to
+// Somewhat similar to insertion sort, but instead of pair-wise swaps,
+// it finds where to insert the current element(using binary search - hence the name)
+// and inserts it there by shifting all the elements to the right of that position to
 // the current element's position by 1
 
 module.exports = function() {
@@ -20,6 +20,7 @@ module.exports = function() {
     console.log("");
 
 
+    // Complexity: O(ln(n))
     let binary_search = (array, item, start, end) => {
 
         if(end <= start) {
